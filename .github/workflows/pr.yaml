@@ -1,0 +1,28 @@
+name: PR
+on:
+  push:
+    branches: [main]
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
+    - name: Install dependencies
+      run: npm install
+    - name: Add Git information
+      run: |
+       git config --global user.email "hello@policyengine.org"
+       git config --global user.name "PolicyEngine"
+    - name: Run React tests
+      run: npm run test
+  Format:
+    runs-on: ubuntu-latest
+    name: Check formatting
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run ESLint
+      run: eslint . --ext .js,.jsx,.ts,.tsx
