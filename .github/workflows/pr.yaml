@@ -24,7 +24,7 @@ jobs:
     name: Check formatting
     steps:
     - uses: actions/checkout@v2
-    - name: Install modules
-      run: yarn
     - name: Run ESLint
-      run: eslint src
+      uses: stefanoeb/eslint-action@1.0.2
+      with:
+        files: src/
