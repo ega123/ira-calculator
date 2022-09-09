@@ -13,5 +13,9 @@ jobs:
         node-version: 14
     - name: Install dependencies
       run: npm install
+    - name: Add Git information
+      run: |
+       git config --global user.email "you@example.com"
+       git config --global user.name "Your Name"
     - name: Build and deploy to GitHub Pages
       run: npm run deploy
