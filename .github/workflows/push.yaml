@@ -11,7 +11,5 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 14
-        cache: 'npm'
-        cache-dependency-path: '**/npm-lock.yaml'
     - name: Build and deploy to GitHub Pages
       run: npm run deploy
