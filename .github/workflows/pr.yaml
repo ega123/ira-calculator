@@ -1,0 +1,33 @@
+name: Pull request
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14
+    - name: Install dependencies
+      run: npm install
+    - name: Add Git information
+      run: |
+       git config --global user.email "hello@policyengine.org"
+       git config --global user.name "PolicyEngine"
+    - name: Run React tests
+      run: npm run test
+  Format:
+    runs-on: ubuntu-latest
+    name: Check formatting
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - run: npm ci # or yarn install
+    - uses: sibiraj-s/action-eslint@v2
+      with:
+        eslint-args: "src"
