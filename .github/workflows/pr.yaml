@@ -24,7 +24,10 @@ jobs:
     name: Check formatting
     steps:
     - uses: actions/checkout@v2
-    - name: Run ESLint
-      uses: stefanoeb/eslint-action@1.0.2
+    - uses: actions/setup-node@v3
       with:
-        files: src/
+        node-version: 16
+    - run: npm ci # or yarn install
+    - uses: sibiraj-s/action-eslint@v2
+      with:
+        eslint-args: "src"
