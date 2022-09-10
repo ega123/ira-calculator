@@ -1,6 +1,6 @@
 import React from 'react';
 import { Radio, Button } from "antd";
-import HouseholdData from './household';
+import HouseholdData from './Household';
 
 export default function Household(props){
     function handleChangeState(evt) {
