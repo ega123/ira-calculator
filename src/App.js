@@ -1,12 +1,13 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import Header from './header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <APIExampleTest />
-      </header>
+    <div>
+      <Header />
+      <APIExampleTest />
     </div>
   );
 }
