@@ -4,7 +4,7 @@
 
 import { Image } from "antd";
 import { Row, Col } from "react-bootstrap";
-import MainLogo from "./white.png";
+import MainLogo from "./images/white.png";
 
 export default function Header(props) {
     return <>
