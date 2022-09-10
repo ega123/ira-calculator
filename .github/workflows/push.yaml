@@ -18,7 +18,7 @@ jobs:
        git config --global user.email "hello@policyengine.org"
        git config --global user.name "PolicyEngine"
     - name: Build static site
-      run: npm run build
+      run: CI="" npm run build
     - name: Deploy to GItHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
