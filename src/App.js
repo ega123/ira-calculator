@@ -73,22 +73,32 @@ class ExpenditureInfo{
   }
 }
 function App() {
+<<<<<<< HEAD
 
   // TODO: begin with a null household in the PR that creates Household component.
   // This is just placeholder data for now
 
 
+=======
+  // TODO: begin with a null household in the PR that creates Household component.
+  // This is just placeholder data for now
+>>>>>>> origin
   const [household, setHousehold] = useState(new HouseholdInfo({
     married: true,
     numChildren: 3,
     zipCode: 98102,
     income: 50000,
   }));
+<<<<<<< HEAD
 
   console.log(household, setHousehold);
 
 
 
+=======
+  console.log(household, setHousehold);
+
+>>>>>>> origin
   return (
     <div>
       <Header />
