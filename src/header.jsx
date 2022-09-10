@@ -2,7 +2,7 @@
  * Component for the top-left title.
 */
 
-import { PageHeader, Image } from "antd";
+import { Image } from "antd";
 import { Row, Col } from "react-bootstrap";
 import MainLogo from "./white.png";
 
