@@ -1,5 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import Header from './header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // TODO: create one of these objects in household component
 class HouseholdInfo {
@@ -23,10 +25,9 @@ function App() {
   console.log(household, setHousehold);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <APIExampleTest />
-      </header>
+    <div>
+      <Header />
+      <APIExampleTest />
     </div>
   );
 }
